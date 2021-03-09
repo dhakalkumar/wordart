@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kumar.controller.WordartController">
+	<center>
+		<AnchorPane BorderPane.alignment="CENTER">
+			<children>
+				<TextArea prefHeight="332.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+			</children>
+		</AnchorPane>
+	</center>
+	<top>
+		<MenuBar BorderPane.alignment="CENTER">
+			<menus>
+				<Menu mnemonicParsing="false" text="File">
+					<items>
+						<MenuItem mnemonicParsing="false" text="New">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+						<MenuItem mnemonicParsing="false" text="Open..." />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Save" />
+                  <MenuItem mnemonicParsing="false" text="Save As..." />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem mnemonicParsing="false" text="Close" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Edit">
+					<items>
+						<MenuItem mnemonicParsing="false" text="Undo        Ctrl+Z " />
+                  <MenuItem mnemonicParsing="false" text="Redo        Ctrl+Y" />
+                  <MenuItem mnemonicParsing="false" text="Delete      Del" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Help">
+					<items>
+						<MenuItem mnemonicParsing="false" text="About" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</top>
+	<bottom>
+		<HBox prefHeight="225.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+			<effect>
+				<Glow />
+			</effect>
+			<children>
+				<AnchorPane style="-fx-background-color: gray;">
+					<children>
+						<Label prefHeight="22.0" prefWidth="88.0" text="Options">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<VBox layoutY="39.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+							<children>
+								<Label text="Font" />
+								<ComboBox fx:id="fontComboBox" prefHeight="20.0" prefWidth="195.0">
+									<VBox.margin>
+										<Insets top="10.0" />
+									</VBox.margin>
+								</ComboBox>
+								<Label layoutX="10.0" layoutY="10.0" text="Size">
+									<VBox.margin>
+										<Insets top="30.0" />
+									</VBox.margin>
+								</Label>
+								<Slider fx:id="fontSizeSlider" prefHeight="38.0" prefWidth="200.0" />
+							</children>
+							<padding>
+								<Insets left="5.0" right="5.0" />
+							</padding>
+						</VBox>
+						<VBox layoutX="200.0" layoutY="39.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: light-gray;">
+							<children>
+								<Label text="Colour">
+									<padding>
+										<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+									</padding>
+								</Label>
+								<ColorPicker fx:id="fontColorPicker" prefHeight="26.0" prefWidth="182.0" />
+							</children>
+							<padding>
+								<Insets left="5.0" right="5.0" />
+							</padding>
+						</VBox>
+						<VBox layoutX="400.0" layoutY="39.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+							<padding>
+								<Insets left="5.0" right="5.0" />
+							</padding>
+							<children>
+								<Label text="DropShadow" />
+								<Label text="Size" />
+								<Slider fx:id="dropShadowSizeSlider" prefHeight="38.0" prefWidth="200.0" />
+								<Label layoutX="15.0" layoutY="26.0" text="Colour" />
+								<ColorPicker fx:id="dropShadowColorPicker" prefHeight="26.0" prefWidth="182.0">
+									<VBox.margin>
+										<Insets top="10.0" />
+									</VBox.margin>
+								</ColorPicker>
+							</children>
+						</VBox>
+						<VBox layoutX="600.0" layoutY="39.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: light-gray;">
+							<padding>
+								<Insets left="5.0" right="5.0" />
+							</padding>
+							<children>
+								<Label text="FileType" />
+								<ComboBox fx:id="imageTypeComboBox" prefHeight="20.0" prefWidth="195.0">
+									<VBox.margin>
+										<Insets top="10.0" />
+									</VBox.margin>
+								</ComboBox>
+								<Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonController" text="Save">
+									<VBox.margin>
+										<Insets bottom="20.0" left="50.0" right="20.0" top="20.0" />
+									</VBox.margin>
+								</Button>
+							</children>
+						</VBox>
+					</children>
+				</AnchorPane>
+			</children>
+		</HBox>
+	</bottom>
+</BorderPane>
