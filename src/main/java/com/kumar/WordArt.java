@@ -1,5 +1,7 @@
 package com.kumar;
 
+import com.kumar.controller.WordartController;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -20,6 +22,10 @@ public class WordArt extends Application {
 //			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/kumar/resources/Wordartui.fxml"));
 			root = loader.load();
+			
+			WordartController controller = loader.getController();
+		    controller.setHostServices(getHostServices());
+		    
 			Scene scene = new Scene(root,800,600);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("WordArt by Kumar Dhakal");
