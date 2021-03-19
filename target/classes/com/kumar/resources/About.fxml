@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ddeeff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kumar.controller.AboutController">
+   <top>
+      <VBox prefHeight="47.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" focusTraversable="false" graphicTextGap="0.0" prefHeight="49.0" prefWidth="176.0" text="WordArt" textAlignment="CENTER" textFill="#b22121" translateX="240.0">
+               <effect>
+                  <Reflection fraction="0.85" topOpacity="0.73" />
+               </effect>
+               <font>
+                  <Font size="40.0" />
+               </font>
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+            </Label>
+            <Label text="A javafx program to create artistic text and save it as image file" translateX="100.0">
+               <VBox.margin>
+                  <Insets bottom="40.0" top="60.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="219.0" prefWidth="354.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Developed by: Kumar Dhakal">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="62.0" prefWidth="254.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="45.0" text="Email: " />
+                  <Hyperlink fx:id="email" prefHeight="26.0" prefWidth="193.0" text="dhakalkumar20@gmail.com" />
+               </children>
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="45.0" prefWidth="429.0">
+               <children>
+                  <Label prefHeight="24.0" prefWidth="51.0" text="github: " />
+                  <Hyperlink fx:id="githubLink" text="https://github.com/dhakalkumar" />
+               </children>
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <ImageView fitHeight="131.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="40.0" right="40.0" />
+         </BorderPane.margin>
+         <image>
+            <Image url="@kumar.jpeg" />
+         </image>
+         <effect>
+            <DropShadow height="25.0" offsetX="10.0" offsetY="10.0" radius="18.25" width="50.0" />
+         </effect>
+      </ImageView>
+   </right>
+   <bottom>
+      <VBox BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <Line endX="325.29290771484375" endY="-0.31387972831726074" startX="624.5858154296875" startY="-1.1631522178649902" strokeLineCap="ROUND" strokeLineJoin="ROUND">
+               <VBox.margin>
+                  <Insets left="150.0" />
+               </VBox.margin></Line>
+            <Label text="March, 2021">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="250.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </bottom>
+   <effect>
+      <InnerShadow />
+   </effect>
+</BorderPane>
